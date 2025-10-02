@@ -183,7 +183,11 @@ function abrirLink(url) {
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+<<<<<<< HEAD
 .glass-navbar .header-menu a:hover {
+=======
+.header-menu a:hover {
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
   background: rgba(255,255,255,0.25);
   color: #000;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
@@ -200,30 +204,79 @@ function abrirLink(url) {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /* Seção Hero/Apresentação */
 .hero-section {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+=======
+/* Cabeçalho flutuante */
+.floating-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: rgba(20, 20, 20, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 0 0 20px 20px;
+}
+.header-logo {
+  font-size: 2.2rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.header-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Espaço para o header flutuante */
+.portfolio {
+  padding-top: 80px;
+}
+
+/* Seção Hero/Apresentação */
+.hero-section {
+  background: rgba(20, 20, 20, 0.6);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
   border-radius: 25px;
   padding: 3rem 2rem;
   color: white;
   margin-bottom: 3rem;
+<<<<<<< HEAD
   box-shadow: 
     0 8px 32px 0 rgba(31, 38, 135, 0.37),
     inset 0 1px 0 rgba(255, 255, 255, 0.3),
     0 1px 0 rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.18);
+=======
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
   transition: all 0.3s ease;
 }
 
 .hero-section:hover {
+<<<<<<< HEAD
   transform: translateY(-5px) scale(1.01);
   box-shadow: 
     0 15px 35px rgba(31, 38, 135, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.15);
+=======
+  background: rgba(40,40,40,0.7);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .perfil-container {
@@ -305,6 +358,7 @@ function abrirLink(url) {
 
 /* Cards dos projetos */
 .projeto-card {
+<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -319,15 +373,32 @@ function abrirLink(url) {
   flex: 1;
   min-width: 300px;
   max-width: 380px;
+=======
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 25px;
+  padding: 2rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  color: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .projeto-card:hover {
+<<<<<<< HEAD
   transform: translateY(-8px) scale(1.02);
   box-shadow: 
     0 20px 40px rgba(31, 38, 135, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.15);
+=======
+  background: rgba(40,40,40,0.7);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .projeto-titulo {
@@ -387,6 +458,7 @@ function abrirLink(url) {
 .contato-section {
   text-align: center;
   padding: 2rem;
+<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -395,6 +467,15 @@ function abrirLink(url) {
   box-shadow: 
     0 8px 32px 0 rgba(31, 38, 135, 0.37),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
+=======
+  color: #fff;
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .contato-links {
