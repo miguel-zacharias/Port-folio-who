@@ -52,20 +52,7 @@ function abrirLink(url) {
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-    <!-- Seção Header/Apresentação -->
-    <header class="hero-section">
-      <div class="perfil-container">
-        <img 
-          :src="desenvolvedor.foto" 
-          :alt="`Foto de ${desenvolvedor.nome}`" 
-          class="foto-perfil"
-        />
-        <div class="info-pessoal">
-          <h1 class="nome-dev">{{ desenvolvedor.nome }}</h1>
-          <p class="descricao">{{ desenvolvedor.descricao }}</p>
-        </div>
-      </div>
-    </header>
+    <!-- ...header removido, navbar mantida... -->
 
     <!-- Seção de Projetos -->
     <section class="projetos-section">
