@@ -44,6 +44,14 @@ function abrirLink(url) {
 
 <template>
   <div class="portfolio">
+    <!-- Navbar flutuante glassmorphism -->
+    <nav class="glass-navbar">
+      <ul class="header-menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
     <!-- Seção Header/Apresentação -->
     <header class="hero-section">
       <div class="perfil-container">
@@ -124,6 +132,66 @@ function abrirLink(url) {
 </template>
 
 <style scoped>
+/* Navbar flutuante centralizada com efeito glassmorphism */
+.glass-navbar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 320px;
+  max-width: 600px;
+  width: 70vw;
+  height: 56px;
+  background: rgba(20, 20, 20, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 0 2rem;
+}
+.glass-navbar .header-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.glass-navbar .header-menu li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.glass-navbar .header-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+<<<<<<< HEAD
+.glass-navbar .header-menu a:hover {
+=======
+.header-menu a:hover {
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
+  background: rgba(255,255,255,0.25);
+  color: #000;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
 /* Estilos gerais do portfolio */
 .portfolio {
   width: 100vw;
@@ -131,29 +199,84 @@ function abrirLink(url) {
   padding: 2rem 4rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: #181818;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /* Seção Hero/Apresentação */
 .hero-section {
-  background: rgba(40, 40, 40, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+=======
+/* Cabeçalho flutuante */
+.floating-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: rgba(20, 20, 20, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+  border-radius: 0 0 20px 20px;
+}
+.header-logo {
+  font-size: 2.2rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.header-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Espaço para o header flutuante */
+.portfolio {
+  padding-top: 80px;
+}
+
+/* Seção Hero/Apresentação */
+.hero-section {
+  background: rgba(20, 20, 20, 0.6);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
   border-radius: 25px;
   padding: 3rem 2rem;
-  color: #fff;
+  color: white;
   margin-bottom: 3rem;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-  border: 1px solid rgba(255,255,255,0.12);
+<<<<<<< HEAD
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 1px 0 rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+=======
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
   transition: all 0.3s ease;
 }
 
 .hero-section:hover {
+<<<<<<< HEAD
   transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-  background: rgba(60,60,60,0.8);
+  box-shadow: 
+    0 15px 35px rgba(31, 38, 135, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+=======
+  background: rgba(40,40,40,0.7);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .perfil-container {
@@ -235,23 +358,47 @@ function abrirLink(url) {
 
 /* Cards dos projetos */
 .projeto-card {
-  background: rgba(30, 30, 30, 0.7);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+<<<<<<< HEAD
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 25px;
   padding: 2rem;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 1px 0 rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   flex: 1;
   min-width: 300px;
   max-width: 380px;
+=======
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 25px;
+  padding: 2rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  color: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .projeto-card:hover {
+<<<<<<< HEAD
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  background: rgba(60,60,60,0.8);
+  box-shadow: 
+    0 20px 40px rgba(31, 38, 135, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+=======
+  background: rgba(40,40,40,0.7);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .projeto-titulo {
@@ -277,22 +424,22 @@ function abrirLink(url) {
 }
 
 .tech-tag {
-  background: rgba(220,220,220,0.2);
-  backdrop-filter: blur(8px);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Botão dos projetos */
 .btn-projeto {
-  background: rgba(220,220,220,0.2);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.8rem 1.5rem;
   border-radius: 15px;
   font-weight: bold;
@@ -302,22 +449,33 @@ function abrirLink(url) {
 }
 
 .btn-projeto:hover {
-  background: #fff;
-  color: #181818;
+  background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Seção de Contato */
 .contato-section {
   text-align: center;
   padding: 2rem;
-  background: rgba(40, 40, 40, 0.7);
+<<<<<<< HEAD
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+=======
+  color: #fff;
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-radius: 25px;
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+>>>>>>> parent of 4016183 (Revert "Update Portfolio.vue")
 }
 
 .contato-links {
@@ -328,25 +486,29 @@ function abrirLink(url) {
 }
 
 .contato-link {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   padding: 0.8rem 1.5rem;
   border-radius: 15px;
   transition: all 0.3s ease;
   font-weight: 500;
-  background: rgba(220,220,220,0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .contato-link:hover {
   transform: translateY(-2px) scale(1.02);
-  color: #181818;
-  background: #fff;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-  border-color: #fff;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .email:hover { 
