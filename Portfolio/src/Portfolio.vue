@@ -44,6 +44,14 @@ function abrirLink(url) {
 
 <template>
   <div class="portfolio">
+    <!-- Navbar flutuante glassmorphism -->
+    <nav class="glass-navbar">
+      <ul class="header-menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
     <!-- Seção Header/Apresentação -->
     <header class="hero-section">
       <div class="perfil-container">
@@ -124,6 +132,62 @@ function abrirLink(url) {
 </template>
 
 <style scoped>
+/* Navbar flutuante centralizada com efeito glassmorphism */
+.glass-navbar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 320px;
+  max-width: 600px;
+  width: 70vw;
+  height: 56px;
+  background: rgba(30, 30, 30, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 0 2rem;
+}
+.glass-navbar .header-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.glass-navbar .header-menu li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.glass-navbar .header-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  background: rgba(220,220,220,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.glass-navbar .header-menu a:hover {
+  background: #fff;
+  color: #181818;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
 /* Estilos gerais do portfolio */
 .portfolio {
   width: 100vw;
