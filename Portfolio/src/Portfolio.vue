@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 // Informações pessoais do desenvolvedor
 const desenvolvedor = ref({
-  nome: 'Miguel T Zacharias',
+  nome: 'Miguel Zacharias',
   foto: 'https://avatars.githubusercontent.com/u/184536316?v=4',
   descricao: 'Web Developer | Laravel, PHP & JS | Cybersecurity Intern | Audio Gear Builder | Learning Full-Stack.',
   email: 'miguel.zacharias@aluno.senai.br',
