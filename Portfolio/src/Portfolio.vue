@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 // Informações pessoais do desenvolvedor
 const desenvolvedor = ref({
-  nome: 'Miguel Zacharias',
+  nome: 'Miguel T Zacharias',
   foto: 'https://avatars.githubusercontent.com/u/184536316?v=4',
   descricao: 'Web Developer | Laravel, PHP & JS | Cybersecurity Intern | Audio Gear Builder | Learning Full-Stack.',
   email: 'miguel.zacharias@aluno.senai.br',
@@ -61,7 +61,7 @@ function abrirLink(url) {
           class="foto-perfil"
         />
         <div class="info-pessoal">
-          <h1 class="nome-dev">{{ desenvolvedor.nome }}</h1>
+          <!-- Removido o texto Portifolio Zacharias -->
           <p class="descricao">{{ desenvolvedor.descricao }}</p>
         </div>
       </div>
@@ -142,7 +142,7 @@ function abrirLink(url) {
   max-width: 600px;
   width: 70vw;
   height: 56px;
-  background: rgba(30, 30, 30, 0.7);
+  background: rgba(30, 30, 30, 0.35);
   color: #fff;
   display: flex;
   align-items: center;
@@ -202,7 +202,7 @@ function abrirLink(url) {
 
 /* Seção Hero/Apresentação */
 .hero-section {
-  background: rgba(40, 40, 40, 0.7);
+  background: rgba(40, 40, 40, 0.35);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 25px;
@@ -299,7 +299,7 @@ function abrirLink(url) {
 
 /* Cards dos projetos */
 .projeto-card {
-  background: rgba(30, 30, 30, 0.7);
+  background: rgba(30, 30, 30, 0.35);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 25px;
@@ -376,7 +376,7 @@ function abrirLink(url) {
 .contato-section {
   text-align: center;
   padding: 2rem;
-  background: rgba(40, 40, 40, 0.7);
+  background: rgba(40, 40, 40, 0.35);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 25px;
