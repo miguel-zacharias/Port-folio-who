@@ -149,17 +149,12 @@ function abrirLink(url) {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
-  border-radius: 12px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 .header-menu a:hover {
-  background: rgba(255,255,255,0.25);
+  background: #fff;
   color: #000;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 /* Estilo preto e branco para toda a página */
 .portfolio {
@@ -181,7 +176,7 @@ function abrirLink(url) {
   left: 0;
   width: 100vw;
   height: 60px;
-  background: rgba(20, 20, 20, 0.6);
+  background: #000;
   color: #fff;
   display: flex;
   align-items: center;
@@ -190,10 +185,6 @@ function abrirLink(url) {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   font-weight: bold;
   letter-spacing: 2px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-radius: 0 0 20px 20px;
 }
 .header-logo {
   font-size: 2.2rem;
@@ -212,15 +203,19 @@ function abrirLink(url) {
 
 /* Seção Hero/Apresentação */
 .hero-section {
-  background: rgba(20, 20, 20, 0.6);
+  background: #111;
   border-radius: 25px;
   padding: 3rem 2rem;
   color: #fff;
   margin-bottom: 3rem;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+  border: 1px solid #222;
   transition: all 0.3s ease;
 }
 .hero-section:hover {
-  background: rgba(40,40,40,0.7);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  background: #222;
 }
 .perfil-container {
   display: flex;
@@ -289,20 +284,21 @@ function abrirLink(url) {
 }
 /* Cards dos projetos */
 .projeto-card {
-  background: rgba(20, 20, 20, 0.6);
+  background: #111;
   border-radius: 25px;
   padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+  transition: all 0.3s ease;
+  border: 1px solid #222;
   flex: 1;
   min-width: 300px;
   max-width: 380px;
   color: #fff;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
 }
 .projeto-card:hover {
-  background: rgba(40,40,40,0.7);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  background: #222;
 }
 .projeto-titulo {
   color: #fff;
@@ -354,13 +350,11 @@ function abrirLink(url) {
 .contato-section {
   text-align: center;
   padding: 2rem;
-  color: #fff;
-  background: rgba(20, 20, 20, 0.6);
+  background: #111;
   border-radius: 25px;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid #222;
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  color: #fff;
 }
 .contato-links {
   display: flex;
