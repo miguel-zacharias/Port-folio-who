@@ -62,6 +62,7 @@ function abrirLink(url) {
         />
         <div class="info-pessoal">
           <!-- Removido o texto Portifolio Zacharias -->
+          <h1 class="nome-dev">{{ desenvolvedor.nome }}</h1>
           <p class="descricao">{{ desenvolvedor.descricao }}</p>
         </div>
       </div>
