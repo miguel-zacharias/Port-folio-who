@@ -238,7 +238,7 @@ export function CertificationsSection() {
                     <div className="absolute inset-0 max-[649px]:flex items-center justify-center z-10 min-[650px]:hidden">
                       <button
                         onClick={toggleShowAll}
-                        className="px-4 py-2 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg text-sm"
+                        className="px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-400 text-gray-900 rounded-full font-medium hover:from-gray-400 hover:to-gray-100 transition-colors shadow-lg text-sm"
                       >
                         Show All ({certificationsData.length - 1})
                       </button>

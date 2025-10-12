@@ -227,7 +227,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h1 title="My Projects" className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent mb-4">
+          <h1 title="My Projects" className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4">
             My Projects
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-3">
@@ -366,7 +366,7 @@ const Projects = () => {
                   <button
                     title={`Show All Projects (${filteredProjects.length - 4})`}
                     onClick={toggleShowAll}
-                    className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg"
+                    className="px-6 py-3 bg-gradient-to-r from-gray-100 to-gray-400 text-gray-900 rounded-full font-medium hover:from-gray-400 hover:to-gray-100 transition-colors shadow-lg"
                   >
                     Show All ({filteredProjects.length}) Projects
                   </button>

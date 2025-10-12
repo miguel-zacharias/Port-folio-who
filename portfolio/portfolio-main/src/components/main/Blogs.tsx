@@ -104,7 +104,7 @@ export function BlogsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 title="My Recent Blogs" className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent mb-4">
+          <h2 title="My Recent Blogs" className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4">
             My Recent Blogs ✍️
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -215,7 +215,7 @@ export function BlogsSection() {
               href="https://dev.to/hasan_ashab"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-block"
+              className="group relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-400 hover:from-gray-400 hover:to-gray-100 text-gray-900 px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-block"
             >
               <div className="relative z-10">Read All Blogs</div>
               <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

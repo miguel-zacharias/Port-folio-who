@@ -150,7 +150,7 @@ const Timeline: FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 title="Professional Experience & Projects" className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent mb-4">
+          <h1 title="Professional Experience & Projects" className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4">
             Professional Experience & Projects
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

@@ -51,11 +51,11 @@ const ResumeSection = () => {
         viewport={{ once: true }}
         className="text-center mb-10 relative z-10"
       >
-        <h2 title="My Resume" className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent tracking-tight mb-4">
-          My Resume
+  <h2 title="Meu Currículo" className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent tracking-tight mb-4">
+    Meu Currículo
         </h2>
         <p className="text-lg text-muted-foreground">
-          View my professional qualifications and experience.
+          Veja minhas qualificações profissionais e experiência.
         </p>
       </motion.div>
 
@@ -118,7 +118,7 @@ const ResumeSection = () => {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="group relative overflow-hidden inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+          className="group relative overflow-hidden inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-gray-100 to-gray-400 hover:from-gray-400 hover:to-gray-100 text-gray-900 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
         >
           <div className="relative z-10 flex items-center gap-2">
             <FaDownload className="text-base" />

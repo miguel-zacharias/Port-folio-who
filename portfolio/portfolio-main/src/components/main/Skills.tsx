@@ -78,7 +78,7 @@ const Skills = () => {
         <h2
           id="skills-heading"
           title="Technical Skills"
-          className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent mb-4"
+          className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4"
         >
           Technical Skills
         </h2>
@@ -143,7 +143,7 @@ const Skills = () => {
             <button
               title={showAll ? 'Show Less Skills' : `Show All Skills`}
               onClick={() => setShowAll(!showAll)}
-              className="group relative overflow-hidden bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="group relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-400 hover:from-gray-400 hover:to-gray-100 text-gray-900 px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <div className="relative z-10">
                 {showAll ? 'Show Less' : `Show All (${uniqueSkills.length})`}
