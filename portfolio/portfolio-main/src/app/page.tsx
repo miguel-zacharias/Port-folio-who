@@ -1,4 +1,4 @@
-import { BlogsSection } from '@/components/main/Blogs'
+// import { BlogsSection } from '@/components/main/Blogs'
 import ContactUs from '@/components/main/ContactUs'
 import Hero from '@/components/main/Hero'
 import Projects from '@/components/main/Projects'
@@ -39,7 +39,7 @@ export default function Home() {
         <Timeline />
         {/* <CertificationsSection /> */}
         <Projects />
-        <BlogsSection />
+  {/* <BlogsSection /> */}
         <ContactUs />
         <Toaster position="bottom-right" />
       </InteractiveWrapper>
