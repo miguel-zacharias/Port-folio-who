@@ -52,7 +52,7 @@ const Skills = () => {
       className="relative flex flex-col items-center justify-center gap-12 py-20 px-4 sm:px-8 min-h-[600px] overflow-hidden"
       aria-labelledby="skills-heading"
     >
-      {/* Animated Background Elements */}
+      {/* Elementos de fundo animados */}
       <div className="absolute inset-0 -z-10">
         {/* Floating Geometric Shapes */}
   <div className="absolute top-20 left-10 w-24 h-24 bg-gradient-to-br from-gray-200/60 via-gray-400/40 to-gray-600/30 rounded-full blur-xl animate-pulse"></div>
@@ -77,13 +77,13 @@ const Skills = () => {
       >
         <h2
           id="skills-heading"
-          title="Technical Skills"
+          title="Habilidades Técnicas"
           className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4"
         >
-          Technical Skills
+          Habilidades Técnicas
         </h2>
         <p className="text-lg text-muted-foreground font-medium">
-          A curated selection of my expertise in DevOps and Cloud Computing
+          Uma seleção das minhas principais habilidades em desenvolvimento, frameworks, mobile e banco de dados.
         </p>
       </motion.div>
 
@@ -141,27 +141,20 @@ const Skills = () => {
             className="mt-12 text-center"
           >
             <button
-              title={showAll ? 'Show Less Skills' : `Show All Skills`}
+              title={showAll ? 'Mostrar menos habilidades' : `Mostrar todas as habilidades`}
               onClick={() => setShowAll(!showAll)}
               className="group relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-400 hover:from-gray-400 hover:to-gray-100 text-gray-900 px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <div className="relative z-10">
-                {showAll ? 'Show Less' : `Show All (${uniqueSkills.length})`}
+                {showAll ? 'Mostrar menos' : `Mostrar todas (${uniqueSkills.length})`}
               </div>
               <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </button>
           </motion.div>
         )}
-
-        <motion.p 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-12 text-center text-base text-muted-foreground"
-        >
-          …and plenty more technologies I'm exploring & mastering every day.
-        </motion.p>
+        <div className="mt-8 text-center text-base text-muted-foreground">
+          ...e muitas outras tecnologias que estou explorando e dominando a cada dia.
+        </div>
       </div>
     </section>
   )

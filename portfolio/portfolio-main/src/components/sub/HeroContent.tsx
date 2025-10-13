@@ -7,178 +7,40 @@ import { TrackableContact } from '@/components/analytics/TrackableElement'
 import { useAnalyticsContext } from '@/components/analytics/AnalyticsProvider'
 
 const HeroContent: FC = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const { trackClick } = useAnalyticsContext()
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  function smoothScrollTo(element: HTMLElement, duration = 1000) {
-    const start = window.scrollY
-    const end = element.getBoundingClientRect().top + start
-    const distance = end - start
-    const startTime = performance.now()
-
-    function scroll(currentTime: number) {
-      const elapsed = currentTime - startTime
-      const progress = Math.min(elapsed / duration, 1)
-      const ease = 1 - Math.pow(1 - progress, 3)
-
-      window.scrollTo(0, start + distance * ease)
-
-      if (elapsed < duration) {
-        requestAnimationFrame(scroll)
-      }
-    }
-
-    requestAnimationFrame(scroll)
-  }
-
-  const handleConnectClick = (e: React.MouseEvent<HTMLElement>) => {
-    // Track the click
-    // trackClick(e, 'hero-connect-button', 'Let\'s Connect')
-
-    const contactSection = document.getElementById('contact')
-    if (contactSection) {
-      smoothScrollTo(contactSection, 1500)
-    }
-  }
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8
-      }
-    }
-  }
-
   return (
     <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      className="relative z-10 flex flex-col items-center justify-center text-center gap-8 px-4 sm:px-8 lg:px-16 w-full max-w-6xl mx-auto pt-20 sm:pt-24 lg:pt-28"
+      className="flex flex-col items-center justify-center gap-6 text-center px-4"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
     >
-      {/* Interactive Cursor Follower */}
-      <div
-        className="fixed pointer-events-none z-0 w-6 h-6 bg-primary/20 rounded-full blur-sm transition-all duration-300 ease-out"
-        style={{
-          left: mousePosition.x - 12,
-          top: mousePosition.y - 12,
-        }}
-      />
-
-
-
-      {/* Main Content Area */}
-      <motion.div variants={itemVariants} className="space-y-6">
-        {/* Name with Gradient Effect */}
-        <div className="relative">
-          <h1 title='name' className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
-            <span title='name' className="bg-gradient-to-r from-foreground via-primary to-gray-400 bg-clip-text text-transparent">
-              Hasan Ashab
-            </span>
-          </h1>
-
-          {/* Decorative Elements */}
-          <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-bounce"></div>
-          <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse"></div>
-        </div>
-
-        {/* Role with Modern Design */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/10 to-primary/10 rounded-2xl blur-xl"></div>
-          <div className="relative bg-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 shadow-2xl">
-            <h2 title="DevOps & Cloud Engineer" className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-3">
-              DevOps & Cloud Engineer
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 rounded-full mx-auto"></div>
-          </div>
-        </div>
-
-        {/* Description */}
-        <motion.p
-          variants={itemVariants}
-          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+      <h1 className="text-5xl sm:text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-6">
+        Olá! Eu sou Miguel Zacharias
+      </h1>
+      <p className="text-lg sm:text-xl text-muted-foreground font-medium max-w-3xl mx-auto mb-6">
+        Desenvolvedor apaixonado por tecnologia, inovação e projetos práticos. Estudo Desenvolvimento de Sistemas no SENAI e atuo em projetos de programação, web, mobile e áudio, sempre buscando soluções criativas e funcionais.
+      </p>
+      <span className="text-lg font-semibold text-foreground">Conecte-se comigo:</span>
+      <div className="flex flex-row gap-4 justify-center mt-4">
+        <a
+          href="https://github.com/miguel-zacharias"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card/60 backdrop-blur-sm border border-primary/20 hover:border-primary/40 hover:bg-card/80 text-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          Building scalable infrastructure aligned with company requirements.
-        </motion.p>
-      </motion.div>
-
-      {/* Action Buttons */}
-      <motion.div
-        variants={itemVariants}
-        className="flex flex-col sm:flex-row items-center gap-4 mt-8 mb-16"
-      >
-        <NavbarButton
-          variant="primary"
-          className="group relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-400 hover:from-gray-400 hover:to-gray-100 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-          onClick={handleConnectClick}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.089 2.91.833.091-.647.35-1.089.636-1.34-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.687-.103-.253-.446-1.272.098-2.652 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.38.202 2.399.1 2.652.64.7 1.028 1.594 1.028 2.687 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.578.688.48C19.138 20.197 22 16.444 22 12.021 22 6.484 17.523 2 12 2Z"></path></svg>
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/miguel-zacharias/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card/60 backdrop-blur-sm border border-primary/20 hover:border-primary/40 hover:bg-card/80 text-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <div className="flex items-center gap-3">
-            <FaRocket className="w-5 h-5 group-hover:animate-bounce" />
-            Let's Connect
-            <div className="w-2 h-2 bg-white/80 rounded-full animate-pulse"></div>
-          </div>
-          <div title="Let's Connect - Navigate to contact section" className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-        </NavbarButton>
-
-        <div className="flex items-center gap-3">
-          <TrackableContact method="github">
-            <NavbarButton
-              title="Visit GitHub profile"
-              variant="secondary"
-              className="group bg-card/60 backdrop-blur-sm border-primary/30 hover:border-primary/60 hover:bg-primary/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-              href="https://github.com/HasanAshab"
-            >
-              <FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            </NavbarButton>
-          </TrackableContact>
-
-          <TrackableContact method="linkedin" title="Visit LinkedIn profile">
-            <NavbarButton
-              title="Visit LinkedIn profile"
-              variant="secondary"
-              className="group bg-card/60 backdrop-blur-sm border-blue-500/30 hover:border-blue-500/60 hover:bg-blue-500/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-              href="https://www.linkedin.com/in/hasan-ashab/"
-            >
-              <FaLinkedin  title="Visit LinkedIn profile" className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            </NavbarButton>
-          </TrackableContact>
-        </div>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        variants={itemVariants}
-        className="mt-2"
-      >
-        <div className="flex flex-col items-center gap-2 text-muted-foreground">
-          <span className="text-sm font-medium">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
-          </div>
-        </div>
-      </motion.div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.597 2.001 3.597 4.601v5.595z"></path></svg>
+          LinkedIn
+        </a>
+      </div>
     </motion.div>
   )
 }

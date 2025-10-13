@@ -28,28 +28,28 @@ const Footer: FC = () => {
 
   const socialLinks = [
     {
-      href: 'https://github.com/HasanAshab',
-      icon: <RxGithubLogo className="w-5 h-5" />,
+      href: 'https://github.com/miguel-zacharias',
+      icon: <RxGithubLogo className="w-5 h-5" />, 
       label: 'GitHub',
     },
     {
-      href: 'https://www.linkedin.com/in/hasan-ashab/',
-      icon: <FaLinkedin className="w-5 h-5" />,
+      href: 'https://www.linkedin.com/in/miguel-zacharias/',
+      icon: <FaLinkedin className="w-5 h-5" />, 
       label: 'LinkedIn',
     },
   ]
 
   const quickLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Blogs', href: '#blogs' },
+    { name: 'Sobre', href: '#about' },
+    { name: 'Habilidades', href: '#skills' },
+    { name: 'Projetos', href: '#projects' },
+    { name: 'Contato', href: '#contact' },
   ]
 
   const servicesLinks = [
-    { name: 'DevOps Engineer', href: '/devops-engineer' },
-    { name: 'Cloud Engineer', href: '/cloud-engineer' },
-    { name: 'DevOps Best Practices', href: '/blog/devops-best-practices' },
+    { name: 'Desenvolvimento Web', href: '#' },
+    { name: 'Mobile', href: '#' },
+    { name: 'Projetos Maker', href: '#' },
   ]
 
   const containerVariants = {
@@ -80,16 +80,15 @@ const Footer: FC = () => {
           animate="visible"
         >
           <motion.div className="space-y-4" variants={childVariants}>
-            <h1 title="Hasan Ashab" className="text-2xl font-extrabold bg-clip-text">Hasan Ashab</h1>
+            <h1 title="Miguel Zacharias" className="text-2xl font-extrabold bg-clip-text">Miguel Zacharias</h1>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              DevOps & Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation. 
-              Building scalable infrastructure aligned with company requirements.
+              Desenvolvedor de Sistemas, apaixonado por tecnologia, web, mobile e projetos de áudio. Buscando sempre inovação, criatividade e soluções funcionais.
             </p>
           </motion.div>
 
           <motion.div className="space-y-4" variants={childVariants}>
-            <h2 title="Quick Links" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-              Quick Links
+            <h2 title="Links Rápidos" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+              Links Rápidos
             </h2>
             <ul className="space-y-2 text-sm">
               {quickLinks.map((item) => (
@@ -109,8 +108,8 @@ const Footer: FC = () => {
           </motion.div>
 
           <motion.div className="space-y-4" variants={childVariants}>
-            <h2 title="Services" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-              Services
+            <h2 title="Serviços" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+              Serviços
             </h2>
             <ul className="space-y-2 text-sm">
               {servicesLinks.map((item) => (
@@ -130,8 +129,8 @@ const Footer: FC = () => {
           </motion.div>
 
           <motion.div className="space-y-4" variants={childVariants}>
-            <h2 title="Connect" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-              Connect
+            <h2 title="Conecte-se" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+              Conecte-se
             </h2>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((link) => (
@@ -151,7 +150,7 @@ const Footer: FC = () => {
             </div>
             <div className="mt-4">
               <p className="text-xs text-muted-foreground">
-                Keywords: DevOps Portfolio, Cloud Engineer, AWS, Kubernetes, Docker, CI/CD
+                Palavras-chave: Portfólio, Desenvolvedor, Web, Mobile, Áudio, Maker, Itu, SP
               </p>
             </div>
           </motion.div>
@@ -165,7 +164,7 @@ const Footer: FC = () => {
         >
 
           <p className="text-xs text-muted-foreground">
-            Visitors:{' '}
+            Visitantes:{' '}
             <span className="font-semibold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               {visitorCount.toLocaleString()}
             </span>

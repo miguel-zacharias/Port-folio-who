@@ -17,28 +17,28 @@ import { useState, useMemo } from 'react'
 
 const projectsData = [
   {
-    title: 'Serverless Todo App',
-    description: 'A full-stack serverless todo app built on AWS, showcasing a comprehensive DevOps implementation with Terraform, GitHub Actions CI/CD, and a modern serverless architecture.',
-    imageURL: '/serverless-todo.jpg',
-    github: 'https://github.com/HasanAshab/serverless-todo-app',
-    blog: 'https://dev.to/hasan_ashab/a-serverless-todo-app-on-aws-with-terraform-and-github-actions-mo9',
-    tags: ['AWS', 'Serverless', 'Terraform', 'Github Actions', 'DevSecOps', 'GitOps'],
+    title: 'MGS 2030 S',
+    description: 'Caixa de som projetada e construída do zero, com foco em qualidade sonora, potência e design robusto. Projeto maker completo: acústica, eletrônica e acabamento.',
+    imageURL: '/portfolio.png',
+    tags: ['Áudio', 'Maker', 'Design', 'Eletrônica'],
   },
   {
-    title: 'E-commerce Store DevOps',
-    description: 'A microservices-based e-commerce platform using EKS + Terraform & GitOps With ArgoCD & GitHub Actions.',
-    imageURL: '/retail-store.png',
-    github: 'https://github.com/HasanAshab/retail-store-devops',
-    blog: 'https://dev.to/hasan_ashab/productionizing-awss-retail-sample-app-with-gitops-on-eks-22f2',
-    tags: ['AWS', 'Github Actions', 'Kubernetes', 'ArgoCD', 'Terraform', 'GitOps', 'DevSecOps', 'Docker'],
+    title: 'MSC 1000',
+    description: 'Receiver moderno em desenvolvimento, com VU meter de LEDs, monitor de potência, integração com rádio automotivo e sistema Transmission Line Speaker.',
+    imageURL: '/portfolio.png',
+    tags: ['Áudio', 'Inovação', 'VU Meter', 'Projetos Pessoais'],
   },
   {
-    title: 'Retail Store App - Terraform Fix Contribution',
-    description: 'Contributed to TrainWithShubham open-source Retail Store Sample App by fixing the Terraform deployment issue',
-    imageURL: '/retail-store-contribution-n.png',
-    live: 'http://k8s-ingressn-ingressn-458fe101d6-c35438a11e41fed0.elb.us-west-2.amazonaws.com/',
-    github: 'https://github.com/LondheShubham153/retail-store-sample-app/pull/11',
-    tags: ['Terraform', 'DevOps', 'Open Source Contribution'],
+    title: 'Cadastro de Imóveis',
+    description: 'Sistema de cadastro, organização e atualização de imóveis para imobiliária, garantindo controle e precisão das informações.',
+    imageURL: '/profile-pic.jpg',
+    tags: ['Organização', 'Imobiliária', 'Sistemas'],
+  },
+  {
+    title: 'Soluções em Segurança Eletrônica',
+    description: 'Experiência prática com sistemas de alarme, câmeras e monitoramento, atuando em ambientes corporativos e residenciais.',
+    imageURL: '/elevatelabs.jpg',
+    tags: ['Segurança', 'Tecnologia', 'Infraestrutura'],
   },
   {
     title: 'Three-Tier DevOps (AWS)',
@@ -227,56 +227,15 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h1 title="My Projects" className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4">
-            My Projects
+          <h1 title="Meus Projetos" className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4">
+            Meus Projetos
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-3">
-            A collection of innovative projects showcasing technical expertise & creativity.
+            Uma coleção de projetos inovadores que demonstram minha experiência técnica e criatividade.
           </p>
           <p className="text-sm text-muted-foreground font-medium">
-            Total projects: {totalProjects}
+            Total de projetos: {totalProjects}
           </p>
-        </motion.div>
-
-        {/* Tag Filter Section */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="flex flex-col items-center">
-            <div className="relative bg-card/60 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 shadow-lg">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Tags className="h-5 w-5 text-primary" />
-                <h3 title="Filter by tags" className="text-lg font-medium">Filter by tags</h3>
-                {selectedTags.length > 0 && (
-                  <button
-                    title="Clear all filters"
-                    onClick={clearFilters}
-                    className="text-sm text-muted-foreground hover:text-primary ml-2 underline transition-colors"
-                  >
-                    Clear all
-                  </button>
-                )}
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-2 max-w-2xl">
-                {allTags.map(tag => (
-                  <Badge
-                    key={tag}
-                    title={`Filter by ${tag} (Project)`}
-                    variant={selectedTags.includes(tag) ? "default" : "outline"}
-                    className="cursor-pointer px-3 py-1 rounded-full transition-all hover:scale-105 hover:shadow-md"
-                    onClick={() => toggleTag(tag)}
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          </div>
         </motion.div>
       </div>
 

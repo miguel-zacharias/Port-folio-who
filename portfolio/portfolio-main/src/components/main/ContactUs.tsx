@@ -50,13 +50,13 @@ const ContactUs: FC = () => {
       })
 
       if (response.ok) {
-        setStatus('Message sent successfully!')
+        setStatus('Mensagem enviada com sucesso!')
         setFormData({ name: '', email: '', subject: '', message: '' })
       } else {
-        setStatus('Failed to send message. Please try again.')
+        setStatus('Falha ao enviar mensagem. Tente novamente.')
       }
     } catch {
-      setStatus('An error occurred. Please try again later.')
+      setStatus('Ocorreu um erro. Tente novamente mais tarde.')
     } finally {
       setIsSubmitting(false)
       setTimeout(() => setStatus(''), 5000)
@@ -124,42 +124,41 @@ const ContactUs: FC = () => {
               initial="hidden"
               animate="visible"
             >
-              <h2 title="Connect With Me" className="text-4xl font-extrabold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent">
-                Connect With Me
+              <h2 title="Fale Comigo" className="text-4xl font-extrabold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent">
+                Fale Comigo
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base">
-                Have a project in mind or a question? Reach out and let's turn your ideas into
-                reality.
+                Tem um projeto em mente ou uma dúvida? Entre em contato e vamos transformar suas ideias em realidade.
               </p>
 
               <div className="space-y-5 text-foreground">
                 <div className="flex items-center gap-3">
                   <FaEnvelope className="text-primary text-lg" />
-                  <span className="text-sm font-medium select-text">hasanashab.18205@gmail.com</span>
+                  <span className="text-sm font-medium select-text">miguelzacharias.dev@gmail.com</span>
                   <button
-                    title="Copy email address"
-                    onClick={() => copyToClipboard('hasanashab.18205@gmail.com', 'Email')}
+                    title="Copiar e-mail"
+                    onClick={() => copyToClipboard('miguelzacharias.dev@gmail.com', 'Email')}
                     className="text-muted-foreground hover:text-primary transition"
-                    aria-label="Copy email"
+                    aria-label="Copiar e-mail"
                   >
                     <FaRegCopy />
                   </button>
                 </div>
                 <div className="flex items-center gap-3">
                   <FaSquarePhone className="text-primary text-lg" />
-                  <span className="text-sm font-medium select-text">+880 16273 18919</span>
+                  <span className="text-sm font-medium select-text">(11) 91234-5678</span>
                   <button
-                    title="Copy phone number"
-                    onClick={() => copyToClipboard('+880 16273 18919', 'Phone number')}
+                    title="Copiar telefone"
+                    onClick={() => copyToClipboard('(11) 91234-5678', 'Telefone')}
                     className="text-muted-foreground hover:text-primary transition"
-                    aria-label="Copy phone number"
+                    aria-label="Copiar telefone"
                   >
                     <FaRegCopy />
                   </button>
                 </div>
                 <div className="flex items-center gap-3">
                   <FaMapMarkerAlt className="text-primary text-lg" />
-                  <span className="text-sm font-medium select-text">Dhaka, Bangladesh</span>
+                  <span className="text-sm font-medium select-text">Itu, São Paulo - Brasil</span>
                 </div>
               </div>
             </motion.div>

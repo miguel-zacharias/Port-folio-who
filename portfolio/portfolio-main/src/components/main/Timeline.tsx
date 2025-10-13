@@ -17,81 +17,71 @@ export interface TimelineItem {
   description: string
   achievements: string[]
   icon: JSX.Element
-  companyIcon: JSX.Element
+  // companyIcon: JSX.Element
 }
 
 export const timelineData: TimelineItem[] = [
   {
     id: 1,
     type: 'work',
-    title: 'DevOps Engineer (Intern)',
-    company: 'Elevate Labs',
-    location: 'Remote',
+    title: 'Estagiário em Segurança Eletrônica',
+    company: 'PROTELT',
+    location: 'Itu/SP',
     imageURL: '/elevatelabs.jpg',
-    date: 'Sep 2025 - Present',
-    description: 'Working on real-time projects to gain hands-on experience in modern DevOps practices.',
+    date: 'Fev 2023 - Dez 2023',
+    description: 'Atuação prática com sistemas de alarme, câmeras e monitoramento em ambientes corporativos e residenciais.',
     achievements: [
-      "Setting up and automating CI/CD pipelines with GitHub Actions",
-      "Implementing containerization workflows using Docker",
-      "Exploring orchestration with Kubernetes for scalable deployments",
-      "Deploying applications to cloud environments (AWS & Azure)",
-      "Applying Infrastructure as Code (IaC) principles with Terraform and Ansible",
-      "Configuring monitoring & observability using Prometheus and Grafana",
+      "Instalação e manutenção de sistemas de segurança",
+      "Configuração de câmeras e alarmes",
+      "Atendimento a clientes e suporte técnico",
     ],
     icon: <FaCode className="w-6 h-6 text-primary" />,
-    companyIcon: <FaLaptopCode className="w-8 h-8 text-blue-500" />,
+  // companyIcon: <FaLaptopCode className="w-8 h-8 text-blue-500" />,
   },
   {
     id: 2,
-    type: 'project',
-    title: 'DevOps Independent Projects',
-    company: 'Self-Driven Projects',
-    location: 'Remote',
-    imageURL: '/devops-independent-timeline.png',
-    date: 'Apr 2024 - Aug 2025',
-    description: 'Focused on upskilling in DevOps and Cloud by building personal projects and labs.',
-    achievements: [],
+    type: 'work',
+    title: 'Cadastro e Organização de Imóveis',
+    company: 'Matheus Martins Imobiliária',
+    location: 'Itu/SP',
+    imageURL: '/profile-pic.jpg',
+    date: 'Jan 2024 - Atual',
+    description: 'Responsável pelo cadastro, organização e atualização de imóveis, garantindo precisão e controle do portfólio.',
+    achievements: [
+      "Coleta e registro de dados de imóveis",
+      "Organização e atualização de informações no sistema",
+      "Atenção aos detalhes e responsabilidade com dados",
+    ],
     icon: <FaBook className="w-6 h-6 text-secondary" />,
-    companyIcon: <FaLaptopCode className="w-8 h-8 text-gray-500" />,
+  // companyIcon: <FaLaptopCode className="w-8 h-8 text-gray-500" />,
   },
   {
     id: 3,
-    type: 'work',
-    title: 'Backend Developer (Freelance)',
-    company: 'Fiverr',
-    location: 'Remote',
-    imageURL: '/fiverr.png',
-    date: 'Feb 2021 - Mar 2024',
-    description: 'Developed RESTful APIs, databases, and web applications for clients.',
+    type: 'project',
+    title: 'Projetos de Áudio (MGS 2030 S e MSC 1000)',
+    company: 'Projetos Pessoais',
+    location: 'Itu/SP',
+    imageURL: '/portfolio.png',
+    date: '2022 - Atual',
+    description: 'Desenvolvimento de equipamentos de áudio, caixas de som e receivers, unindo criatividade, eletrônica e design.',
     achievements: [
-      'Built and maintained RESTful APIs with Django REST Framework and Node.js',
-      'Designed database schemas (MySQL, PostgreSQL) and implemented authentication/authorization (JWT, OAuth2)',
-      'Deployed projects on AWS/DigitalOcean with basic CI pipelines for delivery',
+      "Projeto e construção da caixa de som MGS 2030 S",
+      "Desenvolvimento do receiver MSC 1000 com VU meter de LEDs",
+      "Inovação em sistemas Transmission Line Speaker",
     ],
     icon: <FaCode className="w-6 h-6 text-primary" />,
-    companyIcon: <FaLaptopCode className="w-8 h-8 text-blue-500" />,
-  }
+  // companyIcon: <FaLaptopCode className="w-8 h-8 text-blue-500" />,
+  },
 ]
 
 export const TimelineElement: FC<{ item: TimelineItem; index: number }> = ({ item, index }) => (
   <div className="space-y-6" key={index}>
-    <div className="flex items-center gap-4">
-      {item.type === 'work' && (
-        <Image
-          src={item.imageURL}
-          alt={`${item.company} Logo`}
-          width={48}
-          height={48}
-          className="rounded-md shadow bg-muted p-1"
-        />
-      )}
-      <div>
-        <h3 title={item.title} className="text-lg font-semibold text-foreground">{item.title}</h3>
-        <p className="text-sm text-muted-foreground">
-          {item.company} • {item.location}
-        </p>
-        <p className="text-sm text-muted-foreground">{item.date}</p>
-      </div>
+    <div>
+      <h3 title={item.title} className="text-lg font-semibold text-foreground">{item.title}</h3>
+      <p className="text-sm text-muted-foreground">
+        {item.company} • {item.location}
+      </p>
+      <p className="text-sm text-muted-foreground">{item.date}</p>
     </div>
 
     <p className="text-sm text-muted-foreground">{item.description}</p>
@@ -150,11 +140,11 @@ const Timeline: FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 title="Professional Experience & Projects" className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4">
-            Professional Experience & Projects
+          <h1 title="Experiência Profissional & Projetos" className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-700 via-gray-500 to-gray-100 bg-clip-text text-transparent mb-4">
+            Experiência Profissional & Projetos
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Highlights of my career and key projects showcasing my skills & impact.
+            Destaques da minha trajetória e projetos que demonstram minhas habilidades e impacto.
           </p>
         </motion.div>
 
