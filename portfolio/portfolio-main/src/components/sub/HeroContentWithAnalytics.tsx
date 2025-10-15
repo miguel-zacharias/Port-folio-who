@@ -5,12 +5,9 @@ import { FaGithub, FaLinkedin, FaRocket } from 'react-icons/fa'
 import { FC, useState, useEffect } from 'react'
 import { HiSparkles } from 'react-icons/hi'
 import { NavbarButton } from '../ui/resizable-navbar'
-import { TrackableElement, TrackableContact } from '@/components/analytics/TrackableElement'
-import { useAnalyticsContext } from '@/components/analytics/AnalyticsProvider'
 
 const HeroContentWithAnalytics: FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const { trackClick } = useAnalyticsContext()
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -42,9 +39,6 @@ const HeroContentWithAnalytics: FC = () => {
   }
 
   const handleConnectClick = (e: React.MouseEvent<HTMLElement>) => {
-    // Track the click
-    trackClick(e, 'hero-connect-button', 'Let\'s Connect')
-    
     const contactSection = document.getElementById('contact')
     if (contactSection) {
       smoothScrollTo(contactSection, 1500)
@@ -143,25 +137,20 @@ const HeroContentWithAnalytics: FC = () => {
         </NavbarButton>
 
         <div className="flex items-center gap-3">
-          <TrackableContact method="github">
-            <NavbarButton
-              variant="secondary"
-              className="group bg-card/60 backdrop-blur-sm border-primary/30 hover:border-primary/60 hover:bg-primary/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-              href="https://github.com/HasanAshab"
-            >
-              <FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            </NavbarButton>
-          </TrackableContact>
-
-          <TrackableContact method="linkedin">
-            <NavbarButton
-              variant="secondary"
-              className="group bg-card/60 backdrop-blur-sm border-gray-400/30 hover:border-gray-400/60 hover:bg-gray-400/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-              href="https://www.linkedin.com/in/hasan-ashab/"
-            >
-              <FaLinkedin className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            </NavbarButton>
-          </TrackableContact>
+          <NavbarButton
+            variant="secondary"
+            className="group bg-card/60 backdrop-blur-sm border-primary/30 hover:border-primary/60 hover:bg-primary/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+            href="https://github.com/HasanAshab"
+          >
+            <FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+          </NavbarButton>
+          <NavbarButton
+            variant="secondary"
+            className="group bg-card/60 backdrop-blur-sm border-gray-400/30 hover:border-gray-400/60 hover:bg-gray-400/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+            href="https://www.linkedin.com/in/hasan-ashab/"
+          >
+            <FaLinkedin className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+          </NavbarButton>
         </div>
       </motion.div>
 

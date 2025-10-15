@@ -21,7 +21,7 @@ interface NavItemsProps {
   items: {
     name: string
     link: string
-    icon: JSX.Element
+    icon?: React.ReactNode
   }[]
   className?: string
   isScrolled: boolean
@@ -126,24 +126,6 @@ export const NavItems = ({ items, className, isScrolled, onItemClick }: NavItems
           onClick={(e) => {
             e.preventDefault()
             onItemClick?.()
-            
-            // Track navigation click
-            if (typeof window !== 'undefined') {
-              fetch('/api/analytics/track', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  event_type: 'clicked',
-                  element_id: `nav-${item.name.toLowerCase()}`,
-                  element_text: `Nav: ${item.name}`,
-                  page_path: window.location.pathname,
-                  user_agent: navigator.userAgent,
-                  session_id: sessionStorage.getItem('analytics_session_id') || `session_${Date.now()}`,
-                  timestamp: new Date().toISOString(),
-                }),
-              }).catch(console.error);
-            }
-            
             document.getElementById(item.link.slice(1))?.scrollIntoView({ behavior: 'smooth' })
           }}
           className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"

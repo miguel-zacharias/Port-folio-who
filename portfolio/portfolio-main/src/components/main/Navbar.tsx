@@ -15,13 +15,10 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { FaBlog, FaBriefcase, FaCode, FaEnvelope, FaProjectDiagram, FaUser } from 'react-icons/fa'
 import { Button } from '../ui/button'
-import { TrackableElement, TrackableContact } from '@/components/analytics/TrackableElement'
-import { useAnalyticsContext } from '@/components/analytics/AnalyticsProvider'
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { trackClick } = useAnalyticsContext()
 
   const navItems = [
     { name: 'Sobre', link: '#about', icon: <FaUser /> },
@@ -46,18 +43,16 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <TrackableContact method="navbar-contact">
-              <Button
-                title="Contact me"
-                variant="default"
-                className="rounded-full z-50"
-                onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-                }}
-              >
-                <FaEnvelope />
-              </Button>
-            </TrackableContact>
+            <Button
+              title="Contact me"
+              variant="default"
+              className="rounded-full z-50"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
+              <FaEnvelope />
+            </Button>
           </div>
         </NavBody>
 
@@ -72,40 +67,33 @@ export function Navbar() {
 
           <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
             {navItems.map((item) => (
-              <TrackableElement 
+              <Link
                 key={`mobile-link-${item.name}`}
-                elementId={`mobile-nav-${item.name.toLowerCase()}`}
-                elementText={`Mobile Nav: ${item.name}`}
+                href={item.link}
+                onClick={() => {
+                  setIsMobileMenuOpen(false)
+                  document
+                    .getElementById(item.link.slice(1))
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="relative text-neutral-600 dark:text-neutral-300 flex gap-2 items-center"
               >
-                <Link
-                  href={item.link}
-                  onClick={() => {
-                    setIsMobileMenuOpen(false)
-                    document
-                      .getElementById(item.link.slice(1))
-                      ?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                  className="relative text-neutral-600 dark:text-neutral-300 flex gap-2 items-center"
-                >
-                  {item.icon} <span>{item.name}</span>
-                </Link>
-              </TrackableElement>
+                {item.icon} <span>{item.name}</span>
+              </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
               <ThemeToggle />
-              <TrackableContact method="mobile-navbar-contact">
-                <Button
-                  title="Contact me"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false)
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                  variant="default"
-                  className="w-full rounded-full"
-                >
-                  <FaEnvelope />
-                </Button>
-              </TrackableContact>
+              <Button
+                title="Contact me"
+                onClick={() => {
+                  setIsMobileMenuOpen(false)
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                variant="default"
+                className="w-full rounded-full"
+              >
+                <FaEnvelope />
+              </Button>
             </div>
           </MobileNavMenu>
         </MobileNav>

@@ -3,8 +3,6 @@ import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaRocket } from 'react-icons/fa'
 import { FC, useState, useEffect } from 'react'
 import { NavbarButton } from '../ui/resizable-navbar'
-import { TrackableContact } from '@/components/analytics/TrackableElement'
-import { useAnalyticsContext } from '@/components/analytics/AnalyticsProvider'
 
 const HeroContent: FC = () => {
   return (
