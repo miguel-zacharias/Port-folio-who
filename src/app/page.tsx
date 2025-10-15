@@ -1,5 +1,4 @@
 // import { BlogsSection } from '@/components/main/Blogs'
-import ContactUs from '@/components/main/ContactUs'
 import Hero from '@/components/main/Hero'
 import Projects from '@/components/main/Projects'
 import ResumeSection from '@/components/main/Resume'
@@ -40,7 +39,6 @@ export default function Home() {
         {/* <CertificationsSection /> */}
         <Projects />
   {/* <BlogsSection /> */}
-        <ContactUs />
         <Toaster position="bottom-right" />
       </InteractiveWrapper>
       

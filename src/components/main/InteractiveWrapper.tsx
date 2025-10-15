@@ -57,26 +57,7 @@ export default function InteractiveWrapper({ children }: Props) {
     const title = findTitle(event.target)
 
     if (title) {
-      try {
-        // Send title data to Supabase via analytics API
-        await fetch('/api/analytics/track', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            event_type: 'clicked',
-            element_id: `title-${title.toLowerCase().replace(/\s+/g, '-')}`,
-            element_text: title,
-            page_path: window.location.pathname,
-            user_agent: navigator.userAgent,
-            session_id: sessionStorage.getItem('analytics_session_id') || `session_${Date.now()}`,
-            timestamp: new Date().toISOString()
-          }),
-        })
-      } catch (error) {
-        console.error('Failed to send title analytics:', error)
-      }
+        // Envio de analytics desativado (Supabase removido)
     }
   }
 

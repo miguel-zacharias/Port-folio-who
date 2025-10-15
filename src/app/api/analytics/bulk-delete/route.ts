@@ -1,26 +1,2 @@
-import { NextRequest, NextResponse } from 'next/server'
 
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
-
-
-const ADMIN_TOKEN = process.env.ANALYTICS_ADMIN_TOKEN || 'portfolio-analytics-2025-secure-token'
-
-export async function DELETE(request: NextRequest) {
-  try {
-    // Check authentication
-    const authHeader = request.headers.get('authorization')
-    const token = authHeader?.replace('Bearer ', '')
-    
-    if (!token || token !== ADMIN_TOKEN) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-
- 
-
-  } catch (error) {
-    console.error('Bulk delete analytics events error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
-  }
-}
+// Supabase removido deste endpoint. Nenhuma ação realizada.
