@@ -9,7 +9,7 @@ const ResumeSection = () => {
   const [error, setError] = useState<string | null>(null)
 
   // Convert Google Docs edit URL to embeddable format
-  const googleDocsUrl = 'https://docs.google.com/document/d/147fIVr0h67cWMlcfYRiU-DhmwO20NrS_2EeXnJaYpe4/edit?tab=t.0'
+  const googleDocsUrl = 'https://docs.google.com/document/d/1H8UEebmygs5N_uO6eQP_v0l920Qk9O4apvQexsguN68/edit?usp=sharing'
   const documentId = googleDocsUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1]
   const embedUrl = `https://docs.google.com/document/d/${documentId}/preview`
   const pdfUrl = `https://docs.google.com/document/d/${documentId}/export?format=pdf`
@@ -127,18 +127,6 @@ const ResumeSection = () => {
           <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
         </motion.a>
 
-        <motion.a
-          title="Ver currículo no Google Docs"
-          href={googleDocsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-card/60 backdrop-blur-sm border border-primary/30 hover:border-primary/60 hover:bg-card/80 text-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          <FaExternalLinkAlt className="text-base" />
-          Ver no Google Docs
-        </motion.a>
       </motion.div>
     </section>
   )

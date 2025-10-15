@@ -24,11 +24,10 @@ export function Navbar() {
   const { trackClick } = useAnalyticsContext()
 
   const navItems = [
-    { name: 'About', link: '#about', icon: <FaUser /> },
-    { name: 'Skills', link: '#skills', icon: <FaCode /> },
-    { name: 'Experience', link: '#experience', icon: <FaBriefcase /> },
-    { name: 'Projects', link: '#projects', icon: <FaProjectDiagram /> },
-    { name: 'Blogs', link: '#blogs', icon: <FaBlog /> },
+    { name: 'Sobre', link: '#about', icon: <FaUser /> },
+    { name: 'Competências', link: '#skills', icon: <FaCode /> },
+    { name: 'Experiências', link: '#experience', icon: <FaBriefcase /> },
+    { name: 'Projetos', link: '#projects', icon: <FaProjectDiagram /> },
   ]
 
   useEffect(() => {

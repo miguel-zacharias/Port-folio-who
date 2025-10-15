@@ -12,10 +12,10 @@ import { AnalyticsDebug } from '@/components/analytics/AnalyticsDebug'
 import InteractiveWrapper from '@/components/main/InteractiveWrapper'
 
 export const metadata: Metadata = {
-  title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio | AWS, Kubernetes, Docker',
-  description: 'Professional DevOps and Cloud Engineer portfolio showcasing expertise in AWS, Kubernetes, Docker, CI/CD pipelines, and infrastructure automation. View my projects and experience.',
+  title: 'Miguel Zacharias | Portfólio',
+  description: 'Portfólio profissional de Miguel Zacharias, destacando experiência em desenvolvimento, design e inovação. Veja meus projetos e trajetória.',
   alternates: {
-    canonical: 'https://hasan-ashab.vercel.app',
+    canonical: 'https://miguelzacharias.com',
   },
 }
 

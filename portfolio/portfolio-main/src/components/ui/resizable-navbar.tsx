@@ -258,16 +258,16 @@ export const NavbarLogo = ({ isScrolled }: { isScrolled: boolean }) => {
       className="group flex items-center space-x-3"
       aria-label="Navigate to About section"
     >
-      <Image
-        src="/profile-pic.jpg"
-        alt="Hasan Ashab"
-        width={32}
-        height={32}
-        className="rounded-full"
-      />
+          <Image
+            src="/icon_profile_mz.jpg"
+            alt="Miguel Zacharias"
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
       {!isScrolled && (
-        <span title="Hasan Ashab" className="text-lg font-bold group-hover:text-red-500 transition-colors">
-          Hasan Ashab
+        <span title="Miguel Zacharias" className="text-lg font-bold group-hover:text-red-500 transition-colors">
+          Miguel Zacharias
         </span>
       )}
     </a>

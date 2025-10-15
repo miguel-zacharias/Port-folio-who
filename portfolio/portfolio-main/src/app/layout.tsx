@@ -18,30 +18,30 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio | AWS, Kubernetes, Docker',
+  title: 'Miguel Zacharias | Desenvolvedor e Projetista',
   description:
-    'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects, automation solutions, and scalable deployments.',
+    'Miguel Zacharias - Desenvolvedor e Projetista com experiência em Full Stack, automação, áudio e inovação. Veja meu portfólio, trajetória e projetos.',
   keywords: [
-    'devops portfolio',
-    'cloud engineer portfolio', 
-    'devops engineer',
-    'cloud engineer',
-    'hasan ashab',
-    'hasan ashab portfolio',
-    'portfolio website',
-    'aws devops',
-    'kubernetes engineer',
-    'docker specialist',
-    'ci cd pipeline',
-    'infrastructure automation',
-    'cloud architecture',
-    'terraform',
-    'ansible',
-    'jenkins'
+    'miguel zacharias',
+    'miguel zacharias portfolio',
+    'desenvolvedor',
+    'projetista',
+    'full stack',
+    'portfólio',
+    'automação',
+    'áudio',
+    'inovação',
+    'engenharia',
+    'tecnologia',
+    'projetos pessoais',
+    'caixa de som',
+    'receiver',
+    'imobiliária',
+    'segurança eletrônica'
   ],
-  authors: [{ name: 'Hasan Ashab' }],
-  creator: 'Hasan Ashab',
-  publisher: 'Hasan Ashab',
+  authors: [{ name: 'Miguel Zacharias' }],
+  creator: 'Miguel Zacharias',
+  publisher: 'Miguel Zacharias',
   robots: {
     index: true,
     follow: true,
@@ -55,32 +55,32 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://hasan-ashab.vercel.app',
-    title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects.',
-    siteName: 'Hasan Ashab Portfolio',
+    locale: 'pt_BR',
+    url: 'https://miguelzacharias.com',
+    title: 'Miguel Zacharias - Desenvolvedor & Projetista',
+    description: 'Portfólio de Miguel Zacharias, desenvolvedor e projetista com experiência em automação, áudio, sistemas e inovação.',
+    siteName: 'Miguel Zacharias Portfolio',
     images: [
       {
-        url: '/profile-pic.jpg',
+        url: '/icon_profile_mz.jpg',
         width: 1200,
         height: 630,
-        alt: 'Hasan Ashab - DevOps & Cloud Engineer',
+        alt: 'Miguel Zacharias',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD.',
-    images: ['/profile-pic.jpg'],
-    creator: '@hasanashab',
+    title: 'Miguel Zacharias - Desenvolvedor & Projetista',
+    description: 'Portfólio de Miguel Zacharias, desenvolvedor e projetista.',
+    images: ['/icon_profile_mz.jpg'],
+    creator: '@miguelzacharias',
   },
   alternates: {
-    canonical: 'https://hasan-ashab.vercel.app',
+    canonical: 'https://miguelzacharias.com',
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: '',
   },
 }
 
@@ -92,32 +92,30 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Hasan Ashab',
-    jobTitle: 'DevOps & Cloud Engineer',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation',
-    url: 'https://hasan-ashab.vercel.app',
-    image: 'https://hasan-ashab.vercel.app/profile-pic.jpg',
+    name: 'Miguel Zacharias',
+    jobTitle: 'Desenvolvedor e Projetista',
+    description: 'Miguel Zacharias - Desenvolvedor e Projetista com experiência em Full Stack, automação, áudio e inovação.',
+    url: 'https://miguelzacharias.com',
+    image: '/icon_profile_mz.jpg',
     sameAs: [
-      'https://github.com/HasanAshab',
-      'https://linkedin.com/in/hasan-ashab',
+      'https://github.com/miguel-zacharias',
+      'https://linkedin.com/in/miguel-zacharias',
     ],
     knowsAbout: [
-      'DevOps',
-      'Cloud Engineering', 
-      'AWS',
-      'Kubernetes',
-      'Docker',
-      'CI/CD',
-      'Infrastructure as Code',
-      'Terraform',
-      'Ansible',
-      'Jenkins',
-      'Monitoring',
-      'Automation'
+      'Desenvolvimento',
+      'Projetos de Áudio',
+      'Automação',
+      'Full Stack',
+      'Inovação',
+      'Engenharia',
+      'Tecnologia',
+      'Sistemas',
+      'Imobiliária',
+      'Segurança Eletrônica'
     ],
     worksFor: {
       '@type': 'Organization',
-      name: 'Elevate Labs'
+      name: 'Projetos Pessoais'
     }
   }
 
@@ -128,7 +126,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="canonical" href="https://hasan-ashab.vercel.app" />
+        <link rel="icon" href="/icon_profile_mz.jpg" />
+        <link rel="canonical" href="https://miguelzacharias.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)" />

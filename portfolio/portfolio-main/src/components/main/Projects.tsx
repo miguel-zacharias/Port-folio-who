@@ -19,121 +19,36 @@ const projectsData = [
   {
     title: 'MGS 2030 S',
     description: 'Caixa de som projetada e construída do zero, com foco em qualidade sonora, potência e design robusto. Projeto maker completo: acústica, eletrônica e acabamento.',
-    imageURL: '/portfolio.png',
+    imageURL: '/Diagrama MGS.png',
     tags: ['Áudio', 'Maker', 'Design', 'Eletrônica'],
   },
   {
     title: 'MSC 1000',
     description: 'Receiver moderno em desenvolvimento, com VU meter de LEDs, monitor de potência, integração com rádio automotivo e sistema Transmission Line Speaker.',
-    imageURL: '/portfolio.png',
+    imageURL: '/desenvolver.png',
     tags: ['Áudio', 'Inovação', 'VU Meter', 'Projetos Pessoais'],
   },
   {
     title: 'Cadastro de Imóveis',
     description: 'Sistema de cadastro, organização e atualização de imóveis para imobiliária, garantindo controle e precisão das informações.',
-    imageURL: '/profile-pic.jpg',
+    imageURL: '/Matheus-Martins.png',
     tags: ['Organização', 'Imobiliária', 'Sistemas'],
   },
   {
-    title: 'Soluções em Segurança Eletrônica',
-    description: 'Experiência prática com sistemas de alarme, câmeras e monitoramento, atuando em ambientes corporativos e residenciais.',
-    imageURL: '/elevatelabs.jpg',
+    title: 'La Bombonera Repository',
+    description: 'Repositório focado no desenvolvimento de diversos segmentos no SENAI, como Raspberry PI Pico, Ideias ON e muito mais..',
+    imageURL: '/La Bombonera.png',
     tags: ['Segurança', 'Tecnologia', 'Infraestrutura'],
   },
   {
-    title: 'Three-Tier DevOps (AWS)',
-    description: 'A three-tier application using AWS ECS Fargate, CI/CD and CloudFront. Custom domain + SSL configured (Route53, ACM)',
-    imageURL: '/three-tier-aws.png',
-    github: 'https://github.com/HasanAshab/three-tier-devops-aws',
-    blog: 'https://dev.to/hasan_ashab/cost-optimized-three-tier-architecture-on-aws-with-devops-15h2',
+    title: 'Jornal Entre-Linhas',
+    description: 'Um jornal escolar que visa informar e entreter a comunidade acadêmica com notícias, artigos e eventos relevantes.',
+    imageURL: '/entre_linhas.png',
+    github: 'https://github.com/miguel-zacharias/EntreLinhas',
+    
     tags: ['AWS', 'Github Actions', 'Terraform', 'GitOps', 'DevSecOps', 'Docker'],
   },
-  {
-    title: '2048 Game in the Cloud',
-    description: 'Transformed the classic 2048 game into a cloud-native application using AWS EKS, Docker, Terraform, GitHub Actions CI/CD, and ArgoCD to practice end-to-end DevOps workflows.',
-    imageURL: '/2048-game.png',
-    github: 'https://github.com/HasanAshab/2048-game-devops',
-    blog: 'https://dev.to/hasan_ashab/2048-in-the-cloud-devops-with-aws-argocd-1gpe',
-    tags: ['AWS', 'EKS', 'ArgoCD', 'Terraform', 'Github Actions', 'Docker', 'GitOps'],
-  },
-  {
-    title: 'Website Uptime Monitor',
-    description: 'An AWS-based monitoring system that checks website uptime, response time, and content validity every 5 minutes. Alerts via SNS and stores history in DynamoDB. Built entirely with Terraform.',
-    imageURL: '/web-uptime-monitor.png',
-    github: 'https://github.com/HasanAshab/website-uptime-monitor',
-    blog: 'https://dev.to/hasan_ashab/never-miss-a-downtime-aws-website-uptime-monitor-with-terraform-5f2o',
-    tags: ['AWS', 'Lambda', 'DynamoDB', 'SNS', 'S3', 'Terraform', 'Monitoring', 'Serverless'],
-  },
-  {
-    title: 'EC2 Automated Backup System',
-    description: 'A fully automated EC2 backup system using Lambda and EventBridge. Includes snapshot creation, retention policy, and S3 logs — all managed with Terraform.',
-    imageURL: '/ec2-backup-system.png',
-    github: 'https://github.com/HasanAshab/aws-ec2-backup-lambda',
-    blog: 'https://dev.to/hasan_ashab/automate-ec2-backups-on-aws-with-lambda-eventbridge-and-terraform-k4n',
-    tags: ['AWS', 'Terraform', 'Lambda', 'EventBridge', 'DevOps', 'Serverless'],
-  },
-  {
-    title: 'EC2 Automated Backup System (V2)',
-    description: 'Automated EC2 backup using AWS Backup',
-    imageURL: '/ec2-backup-system-v2.png',
-    github: 'https://github.com/HasanAshab/aws-backup-ec2-terraform',
-    blog: 'https://dev.to/hasan_ashab/why-you-should-use-aws-backup-instead-of-custom-lambda-solutions-3n02',
-    tags: ['AWS', 'Terraform', 'DevOps', 'Serverless', 'AWS Backup'],
-  },
-  {
-    title: 'Hackathon Project - Chattingo',
-    description: 'Full CI/CD pipeline with Jenkins, Docker and Nginx following GitOps, DevSecOps principles for a real-time chat app. Scored 34 out of 40.',
-    imageURL: '/chattingo.png',
-    github: 'https://github.com/HasanAshab/chattingo',
-    video: 'https://youtu.be/DD1U_LmmRw8',
-    blog: 'https://dev.to/hasan_ashab/my-3-day-hackathon-journey-building-a-cicd-pipeline-from-scratch-4ifp',
-    tags: ['VPS', 'Jenkins', 'GitOps', 'DevSecOps', 'Ansible', 'Docker', '🏆Contests'],
-  },
-  {
-    title: 'Three-Tier DevOps (Azure)',
-    description: 'A three-tier application using Azure App Service and CI/CD. (includes HA, DR)',
-    imageURL: '/three-tier-azure.png',
-    github: 'https://github.com/HasanAshab/three-tier-devops-azure',
-    tags: ['Azure', 'Github Actions', 'Terraform', 'GitOps', 'DevSecOps', 'Docker'],
-  },
-  {
-    title: 'Docker Showcase',
-    description: 'A collection of Docker and Docker Compose examples. Includes multi-service stacks (e.g. MERN, MEAN, LAMP).',
-    imageURL: '/docker-showcase.png',
-    github: 'https://github.com/HasanAshab/docker-showcase',
-    tags: ['Docker']
-  },
-  {
-    title: 'Bechakena Admin Panel QA',
-    description: 'Performed complete functional testing of an e-commerce admin dashboard. Covered authentication, product management, and order modules. Delivered structured bug reports and documented findings with evidence.',
-    imageURL: '/bechakena-admin-qa.png',
-    github: 'https://github.com/HasanAshab/bechakena-admin-qa',
-    live: 'https://devcore.bechakeena.com/',
-    tags: ['QA', 'Manual Testing', 'Bug Reporting'],
-  },
-  {
-    title: 'Qtec Corporate Website QA',
-    description: 'Conducted end-to-end QA analysis on Qtec staging website. Identified navigation, content, and UI/UX issues across devices and browsers, focusing on usability, responsiveness, and accessibility.',
-    imageURL: '/qtec-website-qa.png',
-    github: 'https://github.com/HasanAshab/qtec-website-qa',
-    live: 'https://staging.qtecsolution.com/',
-    tags: ['QA', 'Manual Testing', 'Bug Reporting'],
-  },
-  {
-    title: 'SamerArtisan CLI',
-    description: 'A Laravel Artisan-inspired CLI framework for Node.js. Built as a personal tribute to Laravels elegance, it provides structured commands, interactive prompts, and scalable CLI architecture.',
-    imageURL: '/samer-artisan.jpg',
-    github: 'https://github.com/HasanAshab/samer-artisan',
-    blog: 'https://dev.to/hasan_ashab/creating-a-cli-tool-with-nodejs-5b1k',
-    tags: ['Node.js', 'CLI', 'TypeScript', 'npm'],
-  },
-  {
-    title: 'Ranker API (AI)',
-    description: 'A gamified Django API for self-improvement. Create challenges, earn XP, unlock titles. leaderboard. Notifications keep users engaged. (UI NOT READY YET)',
-    imageURL: '/ranker-api.webp',
-    github: 'https://github.com/HasanAshab/ranker-api',
-    tags: ['Django'],
-  },
+  
 ]
 
 // Extract all unique tags from projects
@@ -149,10 +64,10 @@ const LiveIndicator = () => (
 )
 
 const VideoIndicator = () => (
-  <svg fill="#000000" width="15px" height="15px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>youtube</title> <path d="M12.932 20.459v-8.917l7.839 4.459zM30.368 8.735c-0.354-1.301-1.354-2.307-2.625-2.663l-0.027-0.006c-3.193-0.406-6.886-0.638-10.634-0.638-0.381 0-0.761 0.002-1.14 0.007l0.058-0.001c-0.322-0.004-0.701-0.007-1.082-0.007-3.748 0-7.443 0.232-11.070 0.681l0.434-0.044c-1.297 0.363-2.297 1.368-2.644 2.643l-0.006 0.026c-0.4 2.109-0.628 4.536-0.628 7.016 0 0.088 0 0.176 0.001 0.263l-0-0.014c-0 0.074-0.001 0.162-0.001 0.25 0 2.48 0.229 4.906 0.666 7.259l-0.038-0.244c0.354 1.301 1.354 2.307 2.625 2.663l0.027 0.006c3.193 0.406 6.886 0.638 10.634 0.638 0.38 0 0.76-0.002 1.14-0.007l-0.058 0.001c0.322 0.004 0.702 0.007 1.082 0.007 3.749 0 7.443-0.232 11.070-0.681l-0.434 0.044c1.298-0.362 2.298-1.368 2.646-2.643l0.006-0.026c0.399-2.109 0.627-4.536 0.627-7.015 0-0.088-0-0.176-0.001-0.263l0 0.013c0-0.074 0.001-0.162 0.001-0.25 0-2.48-0.229-4.906-0.666-7.259l0.038 0.244z"></path> </g></svg>
+  <svg fill="#000000" width="15px" height="15px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>youtube</title> <path d="M12.932 20.459v-8.917l7.839 4.459zM30.368 8.735c-0.354-1.301-1.354-2.307-2.625-2.663l-0.027-0.006c-3.193-0.406-6.886-0.638-10.634-0.638-0.381 0-0.761 0.002-1.14 0.007l0.058-0.001c-0.322-0.004-0.701-0.007-1.082-0.007-3.748 0-7.443 0.232-11.07 0.681l0.434-0.044c-1.297 0.363-2.297 1.368-2.644 2.643l-0.006 0.026c-0.4 2.109-0.628 4.536-0.628 7.016 0 0.088 0 0.176 0.001 0.263l-0-0.014c-0 0.074-0.001 0.162-0.001 0.25 0 2.48 0.229 4.906 0.666 7.259l-0.038-0.244c0.354 1.301 1.354 2.307 2.625 2.663l0.027 0.006c3.193 0.406 6.886 0.638 10.634 0.638 0.38 0 0.76-0.002 1.14-0.007l-0.058 0.001c0.322 0.004 0.702 0.007 1.082 0.007 3.749 0 7.443-0.232 11.07-0.681l-0.434 0.044c1.298-0.362 2.298-1.368 2.646-2.643l0.006-0.026c0.399-2.109 0.627-4.536 0.627-7.015 0-0.088-0-0.176-0.001-0.263l0 0.013c0-0.074 0.001-0.162 0.001-0.25 0-2.48-0.229-4.906-0.666-7.259l0.038 0.244z"></path> </g></svg>
 )
 const BlogIndicator = () => (
-  <svg fill="#000000" height="15px" width="15px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M17.8,18H15c-0.6,0-1-0.4-1-1v-2.8c0-0.3,0.1-0.5,0.3-0.7L24.9,2.9c0.2-0.2,0.4-0.3,0.7-0.3l0,0c0.3,0,0.5,0.1,0.7,0.3 l2.8,2.8c0.4,0.4,0.4,1,0,1.4L18.5,17.7C18.3,17.9,18.1,18,17.8,18z"></path> </g> <path d="M19.9,19.1c-0.6,0.6-1.3,0.9-2.1,0.9H15c-1.7,0-3-1.3-3-3v-2.8c0-0.8,0.3-1.6,0.9-2.1L18.9,6H9<C7.3,6,6,7.3,6,9v14 c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3v-9.9L19.9,19.1z"></path> </g></svg>
+  <svg fill="#000000" height="15px" width="15px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M17.8,18H15c-0.6,0-1-0.4-1-1v-2.8c0-0.3,0.1-0.5,0.3-0.7L24.9,2.9c0.2-0.2,0.4-0.3,0.7-0.3l0,0c0.3,0,0.5,0.1,0.7,0.3 l2.8,2.8c0.4,0.4,0.4,1,0,1.4L18.5,17.7C18.3,17.9,18.1,18,17.8,18z"></path> </g> <path d="M19.9,19.1c-0.6,0.6-1.3,0.9-2.1,0.9H15c-1.7,0-3-1.3-3-3v-2.8c0-0.8,0.3-1.6,0.9-2.1L18.9,6H9<C7.3,6,6,7.3,6,9v14 c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3v-9.9L19.9,19.1z"></path> </g></svg>
 )
 
 const Projects = () => {

@@ -1,0 +1,40 @@
+Imagens referenciadas no código:
+
+Imagens na pasta public:
+[ver lista completa do passo anterior]
+Imagens não referenciadas no código (candidatas à exclusão):
+
+ansible.svg
+argocd.svg
+aws-secrets-manager.png
+aws.png
+azure.svg
+bash.svg
+CardImage.png
+character.png
+cloudwatch.png
+devops-independent-timeline.png
+django.svg
+docker.webp
+dynamodb.svg
+elk-stack.png
+encryption.webm
+file.svg
+filesharex.png
+Firebase.png
+fiverr.png
+framer.png
+git.svg
+github-142-svgrepo-com.svg
+github.png
+githubactions.svg
+gitlab.png
+gitwhite.png
+glaxy.png
+globe.svg
+google.png
+google16c27da4fcf900c1.html
+grafana.svg
+graphq...
+Próximo passo: gerar a lista de imagens que estão na pasta public mas não são referenciadas no código.
+Próximo passo: gerar a lista de imagens que estão na pasta public mas não são referenciadas no código.

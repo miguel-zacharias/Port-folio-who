@@ -15,12 +15,14 @@ export const skills: Skill[] = [
 
   // Frameworks
   { skill_name: 'Prisma', Image: '/prisma.webp', width: 70, height: 70 },
-  { skill_name: 'Laravel', Image: '/laravel_icon.png', width: 70, height: 70 },
+  { skill_name: 'Laravel', Image: '/laravel.png', width: 70, height: 70 },
   { skill_name: 'Vue', Image: '/vue.png', width: 70, height: 70 },
 
   // Mobile
-  { skill_name: 'Flutter', Image: '/flutter_icon.png', width: 70, height: 70 },
+  { skill_name: 'Flutter', Image: '/flutter.png', width: 70, height: 70 },
   { skill_name: 'Dart', Image: '/dart.png', width: 70, height: 70 },
+  { skill_name: 'Github', Image: '/github.png', width: 70, height: 70 },
+  { skill_name: 'Figma', Image: '/figma.png', width: 70, height: 70 },
 ]
 
 export const Socials = [
