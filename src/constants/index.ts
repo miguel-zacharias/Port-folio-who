@@ -15,7 +15,7 @@ export const skills: Skill[] = [
 
   // Frameworks
   { skill_name: 'Prisma', Image: '/prisma.webp', width: 70, height: 70 },
-  { skill_name: 'Laravel', Image: '/laravel.png', width: 70, height: 70 },
+  { skill_name: 'Laravel', Image: '/laravel.png', width: 90, height: 90 },
   { skill_name: 'Vue', Image: '/vue.png', width: 70, height: 70 },
 
   // Mobile
