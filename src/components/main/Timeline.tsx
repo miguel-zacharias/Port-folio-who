@@ -2,9 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { FC, JSX } from 'react'
-import Image from 'next/image'
 import { Timeline as TimelineComponent } from '@/components/ui/timeline'
-import { FaBook, FaCode, FaLaptopCode } from 'react-icons/fa'
+import { FaBook, FaCode } from 'react-icons/fa'
 
 export interface TimelineItem {
   id: number
@@ -13,11 +12,9 @@ export interface TimelineItem {
   company: string
   location: string
   date: string
-  imageURL: string
   description: string
   achievements: string[]
   icon: JSX.Element
-  // companyIcon: JSX.Element
 }
 
 export const timelineData: TimelineItem[] = [
@@ -27,7 +24,6 @@ export const timelineData: TimelineItem[] = [
     title: 'Cadastro e Organização de Imóveis',
     company: 'Matheus Martins Imobiliária',
     location: 'Salto/SP',
-    imageURL: '/icon_profile_mz.jpg',
     date: 'Outubro 2025 - Atual',
     description: 'Responsável pelo cadastro, organização e atualização de imóveis, garantindo precisão e controle do portfólio.',
     achievements: [
@@ -36,7 +32,6 @@ export const timelineData: TimelineItem[] = [
       "Atenção aos detalhes e responsabilidade com dados",
     ],
     icon: <FaBook className="w-6 h-6 text-secondary" />,
-  // companyIcon: <FaLaptopCode className="w-8 h-8 text-gray-500" />,
   },
   {
     id: 1,
@@ -44,8 +39,7 @@ export const timelineData: TimelineItem[] = [
     title: 'Estagiário em Segurança Eletrônica',
     company: 'PROTELT',
     location: 'Itu/SP',
-    imageURL: '/  ',
-    date: 'Apr 2025 - Jun 2025',
+    date: 'Abr 2025 - Jun 2025',
     description: 'Atuação prática com sistemas de alarme, câmeras e monitoramento em ambientes corporativos e residenciais.',
     achievements: [
       "Instalação e manutenção de sistemas de segurança",
@@ -53,7 +47,6 @@ export const timelineData: TimelineItem[] = [
       "Atendimento a clientes e suporte técnico",
     ],
     icon: <FaCode className="w-6 h-6 text-primary" />,
-  // companyIcon: <FaLaptopCode className="w-8 h-8 text-blue-500" />,
   },
   {
     id: 3,
@@ -61,7 +54,6 @@ export const timelineData: TimelineItem[] = [
     title: 'Projetos de Áudio (MGS 2030 S e MSC 1000)',
     company: 'Projetos Pessoais',
     location: 'Salto/SP',
-    imageURL: '/',
     date: '2019 - Atual',
     description: 'Desenvolvimento de equipamentos de áudio, caixas de som e receivers, unindo criatividade, eletrônica e design.',
     achievements: [
@@ -70,7 +62,6 @@ export const timelineData: TimelineItem[] = [
       "Inovação em sistemas Transmission Line Speaker",
     ],
     icon: <FaCode className="w-6 h-6 text-primary" />,
-  // companyIcon: <FaLaptopCode className="w-8 h-8 text-blue-500" />,
   },
 ]
 
@@ -91,20 +82,6 @@ export const TimelineElement: FC<{ item: TimelineItem; index: number }> = ({ ite
         <li key={ach}>{ach}</li>
       ))}
     </ul>
-
-    {item.type === 'project' && (
-      <div className="w-full mt-4">
-        <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden shadow-md bg-background">
-          <Image
-            src={item.imageURL}
-            alt={`${item.title} Architecture`}
-            className="object-contain"
-            loading="lazy"
-            fill
-          />
-        </div>
-      </div>
-    )}
   </div>
 )
 
@@ -118,16 +95,11 @@ const Timeline: FC = () => {
     <section id="experience" className="relative py-20 text-foreground transition-colors overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
-        {/* Floating Geometric Shapes */}
         <div className="absolute top-20 right-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-60 left-20 w-20 h-20 bg-blue-500/20 rounded-lg rotate-45 animate-bounce"></div>
         <div className="absolute bottom-40 right-1/4 w-16 h-16 bg-primary/15 rounded-full animate-ping"></div>
         <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-blue-400/10 rounded-lg rotate-12 float-animation"></div>
-        
-        {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        
-        {/* Gradient Orbs */}
         <div className="absolute top-1/3 right-1/2 translate-x-1/2 w-96 h-96 bg-gradient-to-r from-primary/20 via-blue-500/10 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-gradient-to-l from-blue-400/15 via-primary/10 to-transparent rounded-full blur-2xl"></div>
       </div>
