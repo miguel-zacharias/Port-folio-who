@@ -47,9 +47,9 @@ const Footer: FC = () => {
   ]
 
   const servicesLinks = [
-    { name: 'Desenvolvimento Web', href: '#' },
-    { name: 'Mobile', href: '#' },
-    { name: 'Projetos Maker', href: '#' },
+    { name: 'Desenvolvimento Web', href: '#skills' },
+    { name: 'Mobile', href: '#skills' },
+    { name: 'Projetos Maker', href: '#experience' },
   ]
 
   const containerVariants = {
