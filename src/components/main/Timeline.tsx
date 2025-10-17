@@ -61,7 +61,7 @@ export const timelineData: TimelineItem[] = [
     title: 'Projetos de Áudio (MGS 2030 S e MSC 1000)',
     company: 'Projetos Pessoais',
     location: 'Salto/SP',
-    imageURL: '/portfolio.png',
+    imageURL: '',
     date: '2019 - Atual',
     description: 'Desenvolvimento de equipamentos de áudio, caixas de som e receivers, unindo criatividade, eletrônica e design.',
     achievements: [
