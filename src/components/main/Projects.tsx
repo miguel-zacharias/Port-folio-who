@@ -41,7 +41,7 @@ const projectsData = [
     description: 'Repositório focado no desenvolvimento de diversos segmentos no SENAI, como Raspberry PI Pico, Ideias ON e muito mais..',
     imageURL: '/La Bombonera.png',
     tags: ['Segurança', 'Tecnologia', 'Infraestrutura'],
-    github: 'https://github.com/miguel-zacharias/LaBombonerarepository'
+    github: 'https://github.com/miguel-zacharias/La-Bombonera-Repository'
   },
   {
     title: 'Jornal Entre-Linhas',
