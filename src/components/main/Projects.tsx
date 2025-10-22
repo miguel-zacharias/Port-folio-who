@@ -21,12 +21,14 @@ const projectsData = [
     description: 'Caixa de som projetada e construída do zero, com foco em qualidade sonora, potência e design robusto. Projeto maker completo: acústica, eletrônica e acabamento.',
     imageURL: '/Diagrama MGS.png',
     tags: ['Áudio', 'Maker', 'Design', 'Eletrônica'],
+    github: 'https://github.com/miguel-zacharias/MGV---Technology',
   },
   {
     title: 'MSC 1000',
     description: 'Receiver moderno em desenvolvimento, com VU meter de LEDs, monitor de potência, integração com rádio automotivo e sistema Transmission Line Speaker.',
     imageURL: '/desenvolver.png',
     tags: ['Áudio', 'Inovação', 'VU Meter', 'Projetos Pessoais'],
+    github: 'https://github.com/miguel-zacharias/MGV---Technology',
   },
   {
     title: 'Cadastro de Imóveis',
@@ -39,6 +41,7 @@ const projectsData = [
     description: 'Repositório focado no desenvolvimento de diversos segmentos no SENAI, como Raspberry PI Pico, Ideias ON e muito mais..',
     imageURL: '/La Bombonera.png',
     tags: ['Segurança', 'Tecnologia', 'Infraestrutura'],
+    github: 'https://github.com/miguel-zacharias/LaBombonerarepository'
   },
   {
     title: 'Jornal Entre-Linhas',
