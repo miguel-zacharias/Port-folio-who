@@ -13,7 +13,7 @@ import {
 import { ThemeToggle } from '@/hooks/use-toogle'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FaBlog, FaBriefcase, FaCode, FaEnvelope, FaProjectDiagram, FaUser } from 'react-icons/fa'
+import { FaBlog, FaBriefcase, FaCode, FaProjectDiagram, FaUser } from 'react-icons/fa'
 import { Button } from '../ui/button'
 
 export function Navbar() {
@@ -43,16 +43,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button
-              title="Contact me"
-              variant="default"
-              className="rounded-full z-50"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              <FaEnvelope />
-            </Button>
+            {/* Contact button removed */}
           </div>
         </NavBody>
 
@@ -83,17 +74,6 @@ export function Navbar() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <ThemeToggle />
-              <Button
-                title="Contact me"
-                onClick={() => {
-                  setIsMobileMenuOpen(false)
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                variant="default"
-                className="w-full rounded-full"
-              >
-                <FaEnvelope />
-              </Button>
             </div>
           </MobileNavMenu>
         </MobileNav>
