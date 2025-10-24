@@ -24,7 +24,7 @@ export const timelineData: TimelineItem[] = [
     title: 'Cadastro e Organização de Imóveis',
     company: 'Grupo Matheus Martins Inteligência Imobiliária',
     location: 'Salto/SP',
-    date: 'Outubro 2025 - Atual',
+    date: 'Oct 2025 - Atual',
     description: 'Responsável pelo cadastro, organização e atualização de imóveis, garantindo precisão e controle do portfólio.',
     achievements: [
       "Coleta e registro de dados de imóveis",
