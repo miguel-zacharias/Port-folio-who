@@ -51,7 +51,15 @@ const projectsData = [
     
     tags: ['AWS', 'Github Actions', 'Terraform', 'GitOps', 'DevSecOps', 'Docker'],
   },
-  
+  {
+    title: 'MGV Records',
+    description: 'Um projeto dedicado à produção e distribuição de música, com foco em um espaço aprimorado com Produtos Do It Yourselft.',
+    imageURL: '/recordes-emegeve.png',
+    tags: ['Música', 'Produção', 'Distribuição'],
+    github: 'https://github.com/miguel-zacharias/MGV-Records',
+  },
+
+
 ]
 
 // Extract all unique tags from projects
